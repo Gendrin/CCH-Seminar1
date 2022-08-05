@@ -7,7 +7,10 @@ namespace Seminar1
       public int Number
         {
             get {return number1;}
-            set {number1 = value;}
+            set {number1 = value;
+                if (number1%2==0) numchet=true;
+                    else numchet=false;
+                }
         }  
         public bool Numchet
         {
