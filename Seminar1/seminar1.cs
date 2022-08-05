@@ -33,6 +33,14 @@ namespace Seminar1
                 else max=z;
             Console.WriteLine($"Максимальное число из трех чисел: {max}");
     }
+    public void zd8 (int num8)
+    {
+        Console.WriteLine($"Отображаем все четные числа от 1 до {num8} ");
+        for (int i=1; i<=num8; ++i)
+            {
+              if (i%2==0) Console.Write($" {i}");
+            }
+    }
     }
 
 }

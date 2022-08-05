@@ -27,4 +27,13 @@ if ((x1 == null)||(y1 == null)||(z1 == null)) Console.WriteLine("Введено 
 else
 {
     seminar1 sem1 = new seminar1(Int32.Parse(x1),Int32.Parse(y1),Int32.Parse(z1));
+    Console.WriteLine("Задача №8, отображаем четные числа от 1 до N.");    
+    x1 = Console.ReadLine();
+    if (x1 == null) Console.WriteLine("Введено значение null!");
+        else
+             {
+             sem1.zd8(Int32.Parse(x1));
+             }
 }
+
+
