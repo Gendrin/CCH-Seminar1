@@ -30,10 +30,10 @@ namespace Seminar1
     }
     public seminar1 (int x, int y, int z) // Конструктор с определением максимального числа из трех чисел
     {
-        int max;
+        int max=x;
         if (x>y) max=x;
-            else if (y>z) max=y;
-                else max=z;
+            if (y>max) max=y;
+                if(z>max) max=z;
             Console.WriteLine($"Максимальное число из трех чисел: {max}");
     }
     public void zd8 (int num8)
