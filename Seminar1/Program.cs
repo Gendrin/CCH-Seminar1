@@ -1,7 +1,8 @@
 ﻿using Seminar1;
 Console.WriteLine("Введите число по задаче №6, проверка на четность.");
 string? snumber1 = Console.ReadLine();
-if (snumber1 == null) Console.WriteLine("Введено значение null!");
+//if (string.IsNullOrWhiteSpace(snumber1))
+if (string.IsNullOrWhiteSpace(snumber1)) Console.WriteLine("Значение не введено!");
    else 
    {
     seminar1 sem1 = new seminar1();
@@ -14,7 +15,7 @@ if (snumber1 == null) Console.WriteLine("Введено значение null!")
     string? x1 = Console.ReadLine();
     Console.WriteLine("Введите число №2  к задаче №2, проверка на максимум.");
     string? y1 = Console.ReadLine();
-    if ((x1 == null)||(y1 == null)) Console.WriteLine("Введено значение null!");
+    if ((string.IsNullOrWhiteSpace(x1))||(string.IsNullOrWhiteSpace(y1))) Console.WriteLine("Значение не введено!");
         else
             {
             sem1.dz2(Int32.Parse(x1),Int32.Parse(y1));
@@ -27,13 +28,14 @@ if (snumber1 == null) Console.WriteLine("Введено значение null!")
     y1 = Console.ReadLine();
     Console.WriteLine("Введите число №3  к задаче №4, проверка на максимум.");
     string? z1 = Console.ReadLine();
-    if ((x1 == null)||(y1 == null)||(z1 == null)) Console.WriteLine("Введено значение null!");
+    if ((string.IsNullOrWhiteSpace(x1))||(string.IsNullOrWhiteSpace(y1))||
+            (string.IsNullOrWhiteSpace(z1))) Console.WriteLine("Значение не введено!");
         else sem1.dz4(Int32.Parse(x1),Int32.Parse(y1),Int32.Parse(z1));
         
     //Задача №8
     Console.WriteLine("Задача №8, отображаем четные числа от 1 до N.");    
     x1 = Console.ReadLine();
-    if (x1 == null) Console.WriteLine("Введено значение null!");
+    if (string.IsNullOrWhiteSpace(x1)) Console.WriteLine("Значение не введено!");
             else
                 {
                 sem1.zd8(Int32.Parse(x1));
