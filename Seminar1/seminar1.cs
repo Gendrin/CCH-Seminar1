@@ -16,25 +16,20 @@ namespace Seminar1
         {
             get {return numchet;}
         }
-    public seminar1 (int n) // Конструктор с определением четности
-    {
-        number1=n; if (n%2==0) 
-                        {numchet=true;Console.WriteLine($"Введенное число: {n} четное");}
-                        else
-                            {numchet=false;Console.WriteLine($"Введенное число: {n} нечетное");}
-    }
-    public seminar1 (int x, int y) // Конструктор с определением максимального числа из двух чисел
+
+    public void dz2 (int x, int y) 
     {
         if (x>y) Console.WriteLine($"Максимальное число из двух чисел: {x}");
             else Console.WriteLine($"Максимальное число из двух чисел: {y}");
     }
-    public seminar1 (int x, int y, int z) // Конструктор с определением максимального числа из трех чисел
+    public void dz4 (int x, int y, int z) 
     {
         int max=x;
         if (x>y) max=x;
             if (y>max) max=y;
                 if(z>max) max=z;
-            Console.WriteLine($"Максимальное число из трех чисел: {max}");
+                    if ((max==x)&&(max==y)&&(max==z)) Console.WriteLine("Все три числа равны!");
+                        else Console.WriteLine($"Максимальное число из трех чисел: {max}");
     }
     public void zd8 (int num8)
     {
