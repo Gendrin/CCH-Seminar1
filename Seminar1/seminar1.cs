@@ -20,7 +20,8 @@ namespace Seminar1
     public void dz2 (int x, int y) 
     {
         if (x>y) Console.WriteLine($"Максимальное число из двух чисел: {x}");
-            else Console.WriteLine($"Максимальное число из двух чисел: {y}");
+            if(y>x) Console.WriteLine($"Максимальное число из двух чисел: {y}");
+                else Console.WriteLine($"введенные два числа 1: {x}, 2: {y} равны.");
     }
     public void dz4 (int x, int y, int z) 
     {
