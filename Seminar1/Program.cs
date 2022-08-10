@@ -2,6 +2,7 @@
 Console.WriteLine("Введите число по задаче №6, проверка на четность.");
 string? snumber1 = Console.ReadLine();
 //if (string.IsNullOrWhiteSpace(snumber1))
+
 if (string.IsNullOrWhiteSpace(snumber1)) Console.WriteLine("Значение не введено!");
    else 
    {
