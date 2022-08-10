@@ -12,15 +12,17 @@ dzSeminar2 dz2 = new dzSeminar2();
 Console.WriteLine("Задание №10. Введите трехзначное целое число!");
 
 InData =checkdata.CheckInData(Console.ReadLine());
-
+int number;
 if (!InData.result) Console.WriteLine("Ввод данных неудачен необходимо повторить ввод данных!");
-    else Console.WriteLine($"Введено значение {InData.inNumber}");
-        if (InData.correct) Console.WriteLine("Произведена корректровка '.' на ','");
-int number = (int)InData.inNumber;
+    else
+    {
+     Console.WriteLine($"Введено значение {InData.inNumber}");
+            if (InData.correct) Console.WriteLine("Произведена корректровка '.' на ','");
+            number = (int)InData.inNumber;
 
-if (checkdata.checkKolNumber(number)!=3) Console.WriteLine("Введенное число не трехзначное целое! Работа программы прекращена.");
-    else Console.WriteLine($"вторая цифра в числе = {dz2.zadacha10(number)}");
-
+        if (checkdata.checkKolNumber(number)!=3) Console.WriteLine("Введенное число не трехзначное целое! Работа программы прекращена.");
+            else Console.WriteLine($"вторая цифра в числе = {dz2.zadacha10(number)}");
+    }
 //Задача №13
 //Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает,
 //что третьей цифры нет.
@@ -28,12 +30,26 @@ Console.WriteLine("Задание №13. Введите любое целое ч
 InData =checkdata.CheckInData(Console.ReadLine());
 
 if (!InData.result) Console.WriteLine("Ввод данных неудачен необходимо повторить ввод данных!");
-    else Console.WriteLine($"Введено значение {InData.inNumber}");
+    else
+    {
+     Console.WriteLine($"Введено значение {InData.inNumber}");
         if (InData.correct) Console.WriteLine("Произведена корректровка '.' на ','");
-number = (int)InData.inNumber;
+        number = (int)InData.inNumber;
 
-if (dz2.zadacha13(number, checkdata.checkKolNumber(number))!=null)
-  Console.WriteLine($"Третья цифра числа: {dz2.zadacha13(number, checkdata.checkKolNumber(number))}");
-    else Console.WriteLine($"Третьей цифры нет!");
+    if (dz2.zadacha13(number, checkdata.checkKolNumber(number))!=null)
+        Console.WriteLine($"Третья цифра числа: {dz2.zadacha13(number, checkdata.checkKolNumber(number))}");
+            else Console.WriteLine($"Третьей цифры нет!");
+    }
+//Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели,
+// и проверяет, является ли этот день выходным.
+Console.WriteLine("Задание №15. Введите целое число от 1 ло 7");
+InData =checkdata.CheckInData(Console.ReadLine());
 
-Console.WriteLine("Hello, World!");
+if (!InData.result) Console.WriteLine("Ввод данных неудачен необходимо повторить ввод данных!");
+    else
+        {
+         Console.WriteLine($"Введено значение {InData.inNumber}");
+            if (InData.correct) Console.WriteLine("Произведена корректровка '.' на ','");
+                number = (int)InData.inNumber;
+            Console.WriteLine(dz2.zadacha15(number));    
+        }

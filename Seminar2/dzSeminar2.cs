@@ -29,6 +29,16 @@ namespace DZ2
             }
             else return null;
         }
+
+        public string zadacha15(int num)
+        {
+            if (num > 0 && num < 8)
+            {
+                if (num > 0 && num < 6) return "нет - день рабочий!";
+                    else return "да - день выходной!";
+            }
+            else return "введено неверное значение дня недели";
+        }
     }
     
 }
