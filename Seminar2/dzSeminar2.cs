@@ -6,5 +6,29 @@ namespace DZ2
         {
             return (n / 10) % 10;
         }
+
+        public int? zadacha13(int num, int koldigitnum)
+        {
+            int[] narr = new int[koldigitnum];
+            if (koldigitnum > 2)
+            {
+                //Заполняем массив
+                for (int i = 0; i < koldigitnum; i++)
+                {
+                    narr[i] = num % 10;
+                    num /= 10;
+                }
+                //Разворачиваем массив
+                for (int i = 0; i < koldigitnum / 2; i++)
+                {
+                    num = narr[i];
+                    narr[i] = narr[((koldigitnum - 1) - i)];
+                    narr[(koldigitnum - 1) - i] = num;
+                }
+                return narr[2];
+            }
+            else return null;
+        }
     }
+    
 }
