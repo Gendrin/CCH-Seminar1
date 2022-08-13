@@ -30,14 +30,9 @@ namespace DZ3
         //Напишите программу, которая принимает на вход число(N) и выдаёт таблицу кубов чисел от 1 до N.
         public string zadacha23(int n)
         {
-            long[] marr = new long[n];
             string result = "";
-            for (int i = 0; i < n; i++)
-            {
-                marr[i] = (long)Math.Pow(i+1, 3);
-                result+=marr[i].ToString()+" ";
-            }
-            return result;
+                for (int i = 1; i < n; i++)  result+=((long)Math.Pow(i, 3)).ToString()+" ";
+                    return result;
         }
 
     }
