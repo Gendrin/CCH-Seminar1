@@ -81,14 +81,14 @@ if (!ErrorIn)
     else Console.WriteLine("Ошибка ввода, рассчет не будет выполнен, повторите ввод!");
 
 //Задача 23
-Console.WriteLine("Введите исходное число для задачи N23 !");
+Console.WriteLine("Введите целое исходное число для задачи N23 от 1 .. N!, дробное значение будет усечено до целого!");
 int innum=0; ErrorIn = false; 
     InData = checkdata.CheckInData(Console.ReadLine());
         if (InData.result) innum = (int)InData.inNumber;
             else ErrorIn = true;
 if (!ErrorIn)
 {
-    if (innum != 0) Console.WriteLine($"" + dz3.zadacha23(innum));
-        else Console.WriteLine("Введено нулевое целое значение!");
+    if (innum > 0) Console.WriteLine($"" + dz3.zadacha23(innum));
+        else Console.WriteLine("Введено нулевое либо отрицательное целое значение! Неверные критерии ввода!");
 }
 else Console.WriteLine("Ошибка ввода, рассчет не будет выполнен, повторите ввод!");
