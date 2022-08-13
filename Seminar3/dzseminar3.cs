@@ -35,6 +35,37 @@ namespace DZ3
                     return result;
         }
 
+         public bool zadacha19full(long n)
+        {
+            int count = 0;
+            long kol;
+            kol = n;
+            do
+            {
+                kol /= 10;
+                count++;
+            }
+            while (kol != 0);
+
+            long templeft, tempright;
+            bool polinom = false;
+            for (int i = 1; i <= count / 2; i++)
+            {
+                templeft = (n / (long)Math.Pow(10, count - i)) % 10;
+                tempright = (n / (long)Math.Pow(10, i - 1)) % 10;
+                if ((n / (int)Math.Pow(10, count - i) == n % 10) && (i == 1)) polinom = true;
+                    else if (templeft == tempright)   polinom = true;
+                          else
+                               {
+                               polinom = false;
+                               break;
+                               }
+            }
+            if (polinom) return true;
+                else return false;
+
+        }
+
     }
     
 }

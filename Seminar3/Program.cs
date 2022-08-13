@@ -14,14 +14,14 @@ InData = checkdata.CheckInData(Console.ReadLine());
 if (!InData.result) Console.WriteLine("Ввод данных неудачен необходимо повторить ввод данных!");
     else Console.WriteLine($"Введено значение {InData.inNumber}");
         if (InData.correct) Console.WriteLine("Произведена корректровка '.' на ','");
-int test = (int)InData.inNumber;
-int kolnumber = checkdata.checkKolNumber(test);
+
+int kolnumber = checkdata.checkKolNumber((int)InData.inNumber);
 
 dzseminar3 dz3 = new dzseminar3();
 
 
-if (kolnumber != 5) Console.WriteLine($"Вы ввели не пятизначное число! -> : {test}");
-else if (dz3.zadacha19(test)) Console.WriteLine("да");
+if (kolnumber != 5) Console.WriteLine($"Вы ввели не пятизначное число! -> : {InData.inNumber}");
+else if (dz3.zadacha19((int)InData.inNumber)) Console.WriteLine("да");
     else Console.WriteLine("нет");
 
 //Задача 21
@@ -92,3 +92,12 @@ if (!ErrorIn)
         else Console.WriteLine("Введено нулевое либо отрицательное целое значение! Неверные критерии ввода!");
 }
 else Console.WriteLine("Ошибка ввода, рассчет не будет выполнен, повторите ввод!");
+
+//Задача на полином до 16 цифр.
+Console.WriteLine("Введите целое исходное число дo 16 цифр для поиска полинома!");
+long fpolin=0; ErrorIn = false; 
+    InData = checkdata.CheckInData(Console.ReadLine());
+        if (InData.result) fpolin = (long)InData.inNumber;
+
+        if (dz3.zadacha19full(fpolin)) Console.WriteLine("Число полином");
+            else Console.WriteLine("Число не полином");
