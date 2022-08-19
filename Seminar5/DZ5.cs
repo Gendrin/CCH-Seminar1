@@ -27,7 +27,7 @@ namespace DZ5
             double[] warr = new double[longArray];
             Random rndD = new Random(); //Рендом для вещественного числа
             Random rndI = new Random(); //Рендом знака для вещественного числа
-            double rndEnd = (1 * Math.Pow(10, quantSigns) - 1);
+            double rndEnd = (1 * Math.Pow(10, quantSigns));
             int rndStartI = -1;
             int rndEndI = 2;
             int znak = 1;
@@ -42,7 +42,7 @@ namespace DZ5
                         }
                         while (znak == 0);
                         }
-                warr[i] = Math.Round((rndD.NextDouble() * rndEnd*znak),2);
+                warr[i] = Math.Round((rndD.NextDouble() * rndEnd*znak),1);
 
             }
             return warr;
