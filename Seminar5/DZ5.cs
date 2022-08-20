@@ -90,7 +90,7 @@ namespace DZ5
                 if (maxN<checkarray[i]) maxN = checkarray[i];
                 if (minN>checkarray[i]) minN = checkarray[i];
             }
-            return maxN-minN;
+            return Math.Round((maxN-minN),2);
 
         }
 
