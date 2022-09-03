@@ -105,7 +105,9 @@ namespace DZ7
             {
                 for (int j = 0; j < parray.GetLength(1); j++)
                 {
-                    Console.Write($"{parray[i, j],6} ");
+                    //Console.Write($"{parray[i, j],6} ");
+                    if (parray[i, j] is Int32) Console.Write($"{parray[i, j],6:d2} ");
+                        else Console.Write($"{parray[i, j],6} ");
                 }
                 Console.WriteLine();
             }
