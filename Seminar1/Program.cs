@@ -43,4 +43,4 @@ if (string.IsNullOrWhiteSpace(snumber1)) Console.WriteLine("Значение н�
                 }
    }
 
-
+//Test
